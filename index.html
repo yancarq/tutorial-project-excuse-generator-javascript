@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
         window.onload = function () {
-            document.getElementById("excuse").innerHTML = RandomExcuse()
+            document.getElementById("excuse").innerHTML = RandomExcuse();
         };
         function RandomExcuse() {
             let who = ['The dog', 'My granma', 'His turtle', 'My bird'];
@@ -18,7 +18,7 @@
 
             let randonWho = RandomNumber(who.length);
             let randomAction = RandomNumber(action.length);
-            let randomWhat = RandomNumber(action.length);
+            let randomWhat = RandomNumber(what.length);
             let randomWhen = RandomNumber(when.length);
 
             return who[randonWho] + " " + action[randomAction] + " " + what[randomWhat] + " " + when[randomWhen]
