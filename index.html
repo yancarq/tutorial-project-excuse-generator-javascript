@@ -7,21 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script>
-
         window.onload = function () {
             document.getElementById("excuse").innerHTML = RandomExcuse()
         };
-
         function RandomExcuse() {
             let who = ['The dog', 'My granma', 'His turtle', 'My bird'];
+            let action = ['ate', 'peed', 'crushed', 'broke'];
             let what = ['eat', 'pissed', 'crushed', 'broked'];
             let when = ['before the class', 'right in time', 'when I finished', 'during my lunch', 'while I was praying'];
 
-            let randonWho = RandomNumber(4);
-            let randomWhat = RandomNumber(4);
-            let randomWhen = RandomNumber(5);
-            
-            return who[randonWho] + " " + what[randomWhat] + " " + when[randomWhen]
+            let randonWho = RandomNumber(who.length);
+            let randomAction = RandomNumber(action.length);
+            let randomWhat = RandomNumber(action.length);
+            let randomWhen = RandomNumber(when.length);
+
+            return who[randonWho] + " " + action[randomAction] + " " + what[randomWhat] + " " + when[randomWhen]
         }
 
         function RandomNumber(max) {
